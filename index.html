@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neria Valen | Modern Luxury Fashion</title>
+  <meta name="description" content="Neria Valen - Elegant, minimal, luxury-inspired women's fashion for urban style leaders." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" data-route="home">Neria Valen</a>
+      <nav class="nav-links">
+        <a href="#home" data-route="home">Home</a>
+        <a href="#shop" data-route="shop">Shop</a>
+        <a href="#about" data-route="about">About</a>
+        <a href="#contact" data-route="contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Toggle Search">⌕</button>
+        <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">♡ <span id="wishlistCount">0</span></button>
+        <button class="icon-btn" id="cartBtn" aria-label="Cart">👜 <span id="cartCount">0</span></button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open Menu">☰</button>
+      </div>
+    </div>
+    <div class="search-row" id="searchRow">
+      <div class="container">
+        <input id="searchInput" type="text" placeholder="Search products, categories..." />
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#home" data-route="home">Home</a>
+      <a href="#shop" data-route="shop">Shop</a>
+      <a href="#about" data-route="about">About</a>
+      <a href="#contact" data-route="contact">Contact</a>
+      <a href="#checkout" data-route="checkout">Checkout</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Page -->
+    <section class="page active" id="homePage" data-page="home">
+      <section class="hero container reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">Neria Valen Atelier / 2026</p>
+          <h1>Quiet Luxury for the Modern Woman.</h1>
+          <p>Designer-level women's essentials crafted with restrained elegance, directional silhouettes, and elevated comfort.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-route="shop">Shop Now</button>
+            <button class="btn btn-light" data-route="about">Our Story</button>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Fashion model in neutral tones" />
+        </div>
+        <aside class="hero-note">
+          <p>Edition</p>
+          <h3>Spring / Summer</h3>
+          <p>Art-directed essentials inspired by modern feminine architecture.</p>
+        </aside>
+      </section>
+
+      <section class="container reveal signature-strip">
+        <article><p>98%</p><span>repeat clients</span></article>
+        <article><p>Premium</p><span>fabric standards</span></article>
+        <article><p>48h</p><span>dispatch in metro cities</span></article>
+      </section>
+
+      <section class="container reveal collections-editorial">
+        <div class="section-head">
+          <h2>Featured Collections</h2>
+          <button class="link-btn" data-route="shop">View All</button>
+        </div>
+        <div class="collection-grid">
+          <article class="collection-card">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Women's essentials collection" />
+            <div><h3>Her Essentials</h3><p>Soft textures with feminine, effortless cuts.</p></div>
+          </article>
+          <article class="collection-card">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Women's streetwear collection" />
+            <div><h3>City Muse</h3><p>Designed for feminine modern movement.</p></div>
+          </article>
+          <article class="collection-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" alt="Women's lounge collection" />
+            <div><h3>Weekend Femme</h3><p>Relaxed silhouettes with elevated polish.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="container reveal best-sellers-editorial">
+        <div class="section-head">
+          <h2>Best Sellers</h2>
+          <button class="link-btn" data-route="shop">Shop Best Sellers</button>
+        </div>
+        <div class="product-grid" id="bestSellerGrid"></div>
+      </section>
+
+      <section class="promo-banner reveal">
+        <div class="container promo-content">
+          <p>Limited Drop / Women's Capsule</p>
+          <h2>New Arrivals, Editorially Curated</h2>
+          <button class="btn btn-primary" data-route="shop">Discover Now</button>
+        </div>
+      </section>
+
+      <section class="container reveal testimonials">
+        <div class="section-head">
+          <h2>Voices of Neria Women</h2>
+        </div>
+        <div class="testimonial-grid">
+          <blockquote>"The fit is so flattering and the quality feels truly premium."</blockquote>
+          <blockquote>"Neria Valen made my everyday outfits look effortlessly chic."</blockquote>
+          <blockquote>"Minimal, feminine, and unbelievably comfortable."</blockquote>
+        </div>
+      </section>
+
+      <section class="container reveal social-editorial">
+        <div class="section-head">
+          <h2>Street Muse Diary</h2>
+          <a class="link-btn" href="#">Follow on Instagram</a>
+        </div>
+        <div class="ig-grid">
+          <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=80" alt="Instagram style look 1" />
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=600&q=80" alt="Instagram style look 2" />
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Instagram style look 3" />
+          <img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=600&q=80" alt="Instagram style look 4" />
+        </div>
+      </section>
+
+      <section class="container reveal newsletter">
+        <h2>Join the Inner Circle</h2>
+        <p>Get private access to women's capsule launches, invitation-only offers, and premium style notes.</p>
+        <form id="newsletterForm">
+          <input type="email" required placeholder="Enter your email" />
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </section>
+    </section>
+
+    <!-- Shop Page -->
+    <section class="page" id="shopPage" data-page="shop">
+      <div class="container shop-layout">
+        <aside class="filters">
+          <h3>Curate Your Edit</h3>
+          <div class="filter-group">
+            <label>Category</label>
+            <select id="categoryFilter" aria-label="Filter by category" title="Filter by category">
+              <option value="all">All</option>
+              <option value="tops">Tops</option>
+              <option value="dresses">Dresses</option>
+              <option value="bottoms">Bottoms</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Size</label>
+            <select id="sizeFilter" aria-label="Filter by size" title="Filter by size">
+              <option value="all">All</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Price</label>
+            <select id="priceFilter" aria-label="Filter by price" title="Filter by price">
+              <option value="all">All</option>
+              <option value="0-50">$0 - $50</option>
+              <option value="50-100">$50 - $100</option>
+              <option value="100-999">$100+</option>
+            </select>
+          </div>
+        </aside>
+
+        <div class="shop-main">
+          <div class="shop-toolbar">
+            <h2>Women's Collection</h2>
+            <select id="sortSelect" aria-label="Sort products" title="Sort products">
+              <option value="featured">Sort: Featured</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+            </select>
+          </div>
+          <div class="product-grid" id="shopGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Details Page -->
+    <section class="page" id="productPage" data-page="product">
+      <div class="container product-detail" id="productDetail"></div>
+    </section>
+
+    <!-- About Page -->
+    <section class="page" id="aboutPage" data-page="about">
+      <div class="container about-page reveal">
+        <h2>About Neria Valen</h2>
+        <p>Neria Valen was created for women who blend confidence with simplicity. We design refined wardrobe essentials that feel luxurious yet wearable, balancing clean silhouettes with feminine elegance.</p>
+        <p>Our mission is to elevate women's daily dressing through quality craftsmanship, mindful material choices, and timeless design inspired by modern urban life.</p>
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1100&q=80" alt="Neria Valen lifestyle scene" />
+      </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section class="page" id="contactPage" data-page="contact">
+      <div class="container contact-page reveal">
+        <h2>Contact Us</h2>
+        <p>Have a question about women's sizing, orders, or collaborations? We'd love to hear from you.</p>
+        <form id="contactForm" class="contact-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <textarea rows="5" placeholder="Message" required></textarea>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Cart + Checkout UI -->
+    <section class="page" id="checkoutPage" data-page="checkout">
+      <div class="container checkout-layout">
+        <div class="cart-panel">
+          <h2>Your Cart</h2>
+          <div id="cartItems"></div>
+          <div class="cart-summary">
+            <p>Subtotal <span id="subtotal">$0.00</span></p>
+            <p>Shipping <span>$8.00</span></p>
+            <p class="total">Total <span id="total">$8.00</span></p>
+          </div>
+        </div>
+        <form class="checkout-form" id="checkoutForm">
+          <h3>Checkout</h3>
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="text" placeholder="Street Address" required />
+          <div class="row">
+            <input type="text" placeholder="City" required />
+            <input type="text" placeholder="ZIP Code" required />
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Card Number" required />
+            <input type="text" placeholder="MM/YY" required />
+          </div>
+          <button class="btn btn-primary" type="submit">Complete Purchase</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick View Modal -->
+  <dialog id="quickViewModal">
+    <div id="quickViewContent"></div>
+    <button class="btn btn-light" id="closeQuickView">Close</button>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <h4>Neria Valen</h4>
+        <p>Modern luxury women's essentials for your everyday style.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about" data-route="about">About</a>
+        <a href="#contact" data-route="contact">Contact</a>
+        <a href="#shop" data-route="shop">Shop</a>
+        <a href="#checkout" data-route="checkout">Checkout</a>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+        <a href="#" aria-label="Pinterest">Pinterest</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
